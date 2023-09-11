@@ -12,6 +12,7 @@ jobs:
     env:
       SQLITE_MAX_VARIABLE_NUMBER: 250000
       SQLITE_MAX_EXPR_DEPTH: 10000
+      OPENSSL_DIR: /usr/local/ssl
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.event.inputs.tag }}
