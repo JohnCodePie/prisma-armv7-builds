@@ -61,7 +61,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: 'Automatic release via CI: ${{ github.event.inputs.tag }}'
           artifacts: |
-            ${{ github.workspace }}/target/armv7-unknown-linux-gnueabihf/release/migration-engine,
+            ${{ github.workspace }}/target/armv7-unknown-linux-gnueabihf/release/schema-engine,
             ${{ github.workspace }}/target/armv7-unknown-linux-gnueabihf/release/prisma-fmt,
             ${{ github.workspace }}/target/armv7-unknown-linux-gnueabihf/release/query-engine,
-            ${{ github.workspace }}/target/armv7-unknown-linux-gnueabihf/release/libquery_engine.dylib
