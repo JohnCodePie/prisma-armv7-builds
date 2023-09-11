@@ -40,8 +40,8 @@ jobs:
           cat <<EOF > Cross.toml
             [target.armv7-unknown-linux-gnueabihf]
             pre-build = [
-              "dpkg --add-architecture armhf",
-              "apt-get update && apt-get install --assume-yes libssl-dev:armhf"
+              "dpkg --add-architecture armv7l",
+              "apt-get update && apt-get install --assume-yes libssl-dev:armv7l"
             ]
           EOF
 
