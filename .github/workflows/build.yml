@@ -54,7 +54,7 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          tag: 5.2.5
+          tag: 5.2.6
           commit: main
           token: ${{ secrets.GITHUB_TOKEN }}
           body: 'Automatic release via CI: ${{ github.event.inputs.tag }}'
