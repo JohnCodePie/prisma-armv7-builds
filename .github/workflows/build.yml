@@ -12,7 +12,6 @@ jobs:
     env:
       SQLITE_MAX_VARIABLE_NUMBER: 250000
       SQLITE_MAX_EXPR_DEPTH: 10000
-      OPENSSL_DIR: /usr/include/openssl
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.event.inputs.tag }}
@@ -40,8 +39,7 @@ jobs:
           cat <<EOF > Cross.toml
             [target.armv7-unknown-linux-gnueabihf]
             pre-build = [
-              "dpkg --add-architecture armhf",
-              "apt-get update && apt-get install --assume-yes libssl-dev:armhf"
+              "dpkg --add-architecture armhf"
             ]
           EOF
 
